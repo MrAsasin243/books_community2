@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#F5EDE0">
+  <title>История встреч — Читальня</title><meta name="description" content="Архив вечеров литературного клуба Читальня: книги, обсуждения, заметки и фотографии.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/history.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header"><div class="container site-header__inner">
+    <a class="brand" href="index.html"><span class="brand__name" data-site-name>Читальня</span><span class="brand__sub" data-site-subtitle>Литературный клуб</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    <nav id="siteNav" class="site-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="history.html">История встреч</a><span data-telegram-wrap><a data-telegram-link>Telegram</a></span></nav>
+  </div></header>
+  <div class="container"><div id="dataNotice" class="data-notice" hidden></div></div>
+  <main id="main">
+    <section class="history-hero"><div class="container"><p class="eyebrow">АРХИВ КЛУБА · CHAPTERS WE SHARED</p><h1>История нашей<br><em>Читальни.</em></h1><p>Каждая встреча — отдельная история.<br>Вот страницы, которые мы уже написали вместе.</p></div></section>
+    <div class="history-controls" id="historyControls" hidden>
+      <label class="search-field"><span class="sr-only">Поиск по названию, книге или автору</span><span aria-hidden="true">⌕</span><input type="search" id="historySearch" placeholder="Поиск по названию или книге…" autocomplete="off"></label>
+      <label class="sort-field"><span>Сортировка</span><select id="historySort"><option value="new">Сначала новые</option><option value="old">Сначала старые</option><option value="manual">Порядок клуба</option></select></label>
+    </div>
+    <p class="history-count muted" id="historyCount" aria-live="polite"></p>
+    <section class="section section--tight"><div class="container"><div class="timeline" id="historyList"></div></div></section>
+  </main>
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фотографии"><button type="button" class="lightbox__close icon-btn" id="lightboxClose" aria-label="Закрыть просмотр">✕</button><img id="lightboxImg" alt=""><div class="lightbox__bar"><button type="button" class="icon-btn" id="lightboxPrev" aria-label="Предыдущее фото">‹</button><span id="lightboxCaption"></span><button type="button" class="icon-btn" id="lightboxNext" aria-label="Следующее фото">›</button></div></dialog>
+  <footer class="site-footer"><div class="container site-footer__inner"><div><p class="site-footer__brand"><span data-site-name>Читальня</span></p><p class="site-footer__tagline">Хорошие истории лучше разделять.</p></div><nav class="site-footer__nav" aria-label="Ссылки в подвале"><a href="index.html">Главная</a><a href="history.html">История встреч</a><span data-telegram-wrap><a data-telegram-link>Telegram</a></span><a href="editor.html" class="muted-link">Редактор</a></nav><p class="site-footer__note">Сделано с любовью к бумажным книгам · <span data-year></span></p></div></footer>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <script src="js/core.js" defer></script><script src="js/render.js" defer></script><script src="js/history.js" defer></script>
+</body></html>

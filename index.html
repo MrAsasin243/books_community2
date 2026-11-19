@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F5EDE0">
+  <meta name="description" content="Читальня — камерный литературный клуб. Встречи, книги, разговоры и тёплые вечера.">
+  <title>Читальня — литературный клуб</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Читальня — главная">
+        <span class="brand__name" data-site-name>Читальня</span>
+        <span class="brand__sub" data-site-subtitle>Литературный клуб</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <nav id="siteNav" class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="history.html">История встреч</a>
+        <span data-telegram-wrap><a data-telegram-link>Telegram</a></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container"><div id="dataNotice" class="data-notice" hidden></div></div>
+  <noscript><div class="container"><div class="data-notice">Для работы Читальни нужен включённый JavaScript.</div></div></noscript>
+
+  <main id="main">
+    <section class="hero hero--cinematic">
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__line"></span><span data-site-subtitle>Литературный клуб</span></p>
+          <h1 class="hero__title"><span data-site-name>Читальня</span><i> — место, где истории продолжаются.</i></h1>
+          <p class="hero__desc" id="heroDesc">Место, где книги становятся поводом для встреч, разговоров и новых знакомств.</p>
+          <div class="hero__actions">
+            <a class="btn btn--light" href="#book-section"><span>Открыть нашу историю</span><span class="btn__arrow" aria-hidden="true">↘</span></a>
+            <a class="hero__quiet-link" href="history.html">Листать архив <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__visual-glow"></div>
+          <div class="hero__image-frame"><img id="heroImage" src="assets/images/hero.svg" width="640" height="520" alt="" fetchpriority="high" decoding="async"></div>
+          <div class="hero__seal"><span>ЧИТАЕМ</span><span>ВМЕСТЕ</span><b>✳</b></div>
+          <span class="hero__side-note">A CLUB FOR THE LOVE OF STORIES</span>
+        </div>
+      </div>
+      <div class="hero__bottom container"><span>КНИГИ · ЛЮДИ · РАЗГОВОРЫ</span><a href="#book-section">ПРОКРУТИТЕ ВНИЗ <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="book-scroll-section" id="book-section" aria-label="История Читальни">
+      <div class="book-scroll-sticky" id="bookScrollSticky">
+        <div class="book-atmosphere" aria-hidden="true"></div>
+        <div class="book-scroll-top container">
+          <span class="book-scroll-kicker">01 / НАШ МИР</span>
+          <span class="book-scroll-instruction" id="bookHint">ПРОКРУТИТЕ, ЧТОБЫ ОТКРЫТЬ</span>
+        </div>
+        <div class="book-stage">
+          <div class="book-stage__halo" aria-hidden="true"></div>
+          <div class="book-shadow" aria-hidden="true"></div>
+          <div class="scroll-book" id="book" data-state="closed">
+            <div class="book-pages">
+              <article class="book-page book-page--left" aria-label="О клубе">
+                <div class="page-inner" id="bookPageLeft"></div>
+                <span class="page-number">01</span>
+              </article>
+              <article class="book-page book-page--right" aria-label="Ближайшая встреча">
+                <div class="page-inner" id="bookPageRight"></div>
+                <span class="page-number">02</span>
+              </article>
+            </div>
+            <div class="book-cover" id="bookCover">
+              <div class="book-cover__face book-cover__front">
+                <div class="book-cover__border">
+                  <span class="book-cover__ornament">✳</span>
+                  <span class="book-cover__small">КЛУБ ЛЮБИТЕЛЕЙ ИСТОРИЙ</span>
+                  <span class="book-cover__title" data-book-title>Читальня</span>
+                  <span class="book-cover__rule"></span>
+                  <span class="book-cover__sub">Книги сближают</span>
+                  <span class="book-cover__author">EST. WITH A LOVE FOR BOOKS</span>
+                </div>
+                <button type="button" class="book-cover__trigger" id="bookOpenTrigger" aria-label="Прокрутить к раскрытой книге"></button>
+              </div>
+              <div class="book-cover__face book-cover__back" aria-hidden="true"><span>EX LIBRIS<br><b>ЧИТАЛЬНЯ</b></span></div>
+            </div>
+            <div class="book-spine" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="book-scroll-caption container">
+          <div class="book-scroll-caption__left"><span class="caption-index">A PLACE BETWEEN THE LINES</span><p>Иногда достаточно<br><em>открыть одну страницу.</em></p></div>
+          <div class="book-scroll-caption__right"><span class="caption-index">02 / ВНУТРИ</span><p>Знакомьтесь с клубом,<br>выбирайте следующую встречу.</p></div>
+        </div>
+        <div class="book-progress" aria-hidden="true"><span id="bookProgressBar"></span></div>
+      </div>
+    </section>
+
+    <section class="section meeting-section" id="next-meeting">
+      <div class="container">
+        <header class="section__head reveal"><p class="eyebrow">Следующая глава</p><h2>Увидимся за книгой</h2><p class="section__intro">У каждой хорошей истории есть продолжение. Возможно, оно начнётся на нашей следующей встрече.</p></header>
+        <div id="nextMeetingBody"></div>
+      </div>
+    </section>
+
+    <section class="section book-month-section" id="book-of-month">
+      <div class="container">
+        <header class="section__head reveal section__head--left"><p class="eyebrow">Сейчас читаем</p><h2>Книга месяца</h2></header>
+        <div id="bookOfMonthBody"></div>
+      </div>
+    </section>
+
+    <section class="section recent-section section--dark" id="recent">
+      <div class="container">
+        <header class="section__head reveal"><p class="eyebrow eyebrow--light">Из нашего архива</p><h2>Прочитанные главы</h2><p class="section__intro">Встречи, после которых хочется продолжать разговор.</p></header>
+        <div class="recent-grid" id="recentBody"></div>
+        <p class="section__more"><a class="btn btn--outline-light" href="history.html">Все встречи <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section telegram-section" id="telegram"><div class="container" id="telegramBody"></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div><p class="site-footer__brand"><span data-site-name>Читальня</span></p><p class="site-footer__tagline">Хорошие истории лучше разделять.</p></div>
+      <nav class="site-footer__nav" aria-label="Ссылки в подвале"><a href="index.html">Главная</a><a href="history.html">История встреч</a><span data-telegram-wrap><a data-telegram-link>Telegram</a></span><a href="editor.html" class="muted-link">Редактор</a></nav>
+      <p class="site-footer__note">Сделано с любовью к бумажным книгам · <span data-year></span></p>
+    </div>
+  </footer>
+
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <script src="js/core.js" defer></script>
+  <script src="js/render.js" defer></script>
+  <script src="js/book.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>
